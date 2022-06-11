@@ -1,0 +1,12 @@
+version: "3"
+services:
+  mycsvserver:
+    image: "infracloudio/csvserver"
+    container_name: infra-csvserver
+    ports:
+    - 9393:9300
+    env_file:
+    - csv.env
+    volumes:
+    - /home/ec2-user/T/solution/inputFile:/csvserver/inputdata
+
